@@ -1,10 +1,12 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
 import AddLinkForm from '../components/AddLinkForm';
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
     <Layout title={'Learning Lynx | Add a Link'}>
+      <Navbar />
       <AddLinkForm />
 
       <div className="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl">

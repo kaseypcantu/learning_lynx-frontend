@@ -3,6 +3,8 @@ import Layout from '../components/Layout';
 import AddLinkForm from '../components/AddLinkForm';
 import Navbar from "../components/Navbar";
 
+
+
 export default function Home() {
   return (
     <Layout title={'Learning Lynx | Add a Link'}>

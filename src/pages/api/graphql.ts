@@ -17,6 +17,7 @@ export default async function graphql(
     });
 
     const responseJSON = await response.json();
+    console.log(res.status(response.status).json(responseJSON));
     res.status(response.status).json(responseJSON);
   } catch (error) {
     console.error(error);

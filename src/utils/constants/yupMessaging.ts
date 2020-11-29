@@ -6,7 +6,9 @@ export enum YupMessaging {
   max = 'Max: ${max} characters',
   linkTitleRequired = 'Title is required',
   linkUrl = 'Must be a valid URL',
-  linkUrlRequired = 'URL required',
+  linkUrlRequired = 'URL is required',
+  symbolsNotAllowed = 'Symbols are not allowed',
+  invalidUrl = 'Please enter a valid URL',
   descriptionRequired = 'Description is required',
   programmingLanguageRequired = 'Language is required'
 }

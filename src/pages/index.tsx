@@ -2,10 +2,11 @@ import * as React from 'react';
 import Layout from '../components/Layout';
 import AddLinkForm from '../components/AddLinkForm';
 import Navbar from "../components/Navbar";
+import { NextPage } from 'next';
 
 
 
-export default function Home() {
+const HomePage: NextPage = () => {
   return (
     <Layout title={'Learning Lynx | Add a Link'}>
       <Navbar />
@@ -23,3 +24,5 @@ export default function Home() {
     </Layout>
   );
 }
+
+export default HomePage;

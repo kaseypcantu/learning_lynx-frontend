@@ -33,9 +33,11 @@ yarn-error.log*
 # vercel
 .vercel
 
-# Intellij 
+# Intellij
 .idea/
 
 # Testing Coverage Directories
 coverage/
 
+# Docker volumes and assets
+docker/

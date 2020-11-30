@@ -1,0 +1,18 @@
+overwrite: true
+schema: ${GRAPHQL_SERVER}
+documents:
+  - ./src/graphql/**/*.gql.ts
+generates:
+  src/graphql/generated.tsx:
+    hooks:
+      afterOneFileWrite:
+        - prettier --write
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      reactApolloVersion: 3
+      withHooks: true
+      skipTypename: true
+      withRefetchFn: true

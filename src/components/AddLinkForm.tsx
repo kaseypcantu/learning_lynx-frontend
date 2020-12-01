@@ -4,7 +4,7 @@ import {
   TextField,
   Grid,
 } from '@material-ui/core';
-import { Form, Formik, Field, FieldAttributes, useField } from 'formik';
+import { Form, Formik, FieldAttributes, useField } from 'formik';
 import * as yup from 'yup';
 import { YupMessaging } from '../utils/constants/yupMessaging';
 
@@ -26,7 +26,7 @@ const newLinkFormValidationSchema: yup.ObjectSchema<newLink> = yup
     linkTitle: yup
       .string()
       .matches(
-        /[^\><!&?@$#%^*\\+-=)(:'"}{\/]+/,
+        /[^><!&?@$#%^*\\+-=)(:'"}{\/]+/,
         YupMessaging.symbolsNotAllowed,
       )
       .required(YupMessaging.linkTitleRequired)
@@ -42,7 +42,7 @@ const newLinkFormValidationSchema: yup.ObjectSchema<newLink> = yup
     programmingLanguage: yup
       .string()
       .matches(
-        /[^\><!&?@$#%^*\\+=)(:'"}{]+/,
+        /[^><!&?@$#%^*\\+=)(:'"}{]+/,
         YupMessaging.symbolsNotAllowed,
       )
       .required(YupMessaging.programmingLanguageRequired)
@@ -50,7 +50,7 @@ const newLinkFormValidationSchema: yup.ObjectSchema<newLink> = yup
     description: yup
       .string()
       .matches(
-        /[^\><!&?@$#%^*\\+=)(:'"}{]+/,
+        /[^><!&?@$#%^*\\+=)(:'"}{]+/,
         YupMessaging.symbolsNotAllowed,
       )
       .required(YupMessaging.descriptionRequired),
@@ -58,11 +58,11 @@ const newLinkFormValidationSchema: yup.ObjectSchema<newLink> = yup
   .required();
 
 // Custom input TextField
-const InputTextField: React.FC<FieldAttributes<FormikInputProps>> = ({
-                                                                       label,
-                                                                       placeholder,
-                                                                       ...props
-                                                                     }) => {
+export const InputTextField: React.FC<FieldAttributes<FormikInputProps>> = ({
+                                                                              label,
+                                                                              placeholder,
+                                                                              ...props
+                                                                            }) => {
   const [field, meta] = useField<{}>(props);
   const errorMessage = meta.error && meta.touched ? meta.error : undefined;
   return (
@@ -108,8 +108,6 @@ const AddLinkForm: React.FC = () => {
           values,
           errors,
           isSubmitting,
-          handleChange,
-          handleBlur,
         }) => (
         <div className={'mt-40'}>
           <Form autoComplete={'off'} style={{ margin: 20 }}>

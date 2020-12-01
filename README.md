@@ -6,6 +6,7 @@ _A place to organize links and resources I wish to learn from_
 ### Deploy your own `Learning Lynx` instance
 
 Deploy to [Vercel](https://vercel.com):
+
 [![Deploy with Vercel](https://vercel.com/button)]()
 
 Learning Lynx is a [Next.js](https://nextjs.org/docs/getting-started "Next.js Documentation") application built

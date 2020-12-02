@@ -8,12 +8,9 @@
     "lib": [
       "esnext",
       "dom",
-      "dom.iterable",
-      "es5",
-      "es6",
-      "es2020"
+      "dom.iterable"
     ],
-    "outDir": "esm",
+    "outDir": "./dist",
     "sourceMap": true,
     "declaration": true,
     "newLine": "LF",

@@ -4,9 +4,9 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   purge: [
-    '.src/components/**/*.{js,jsx,ts,tsx}',
-    '.src/pages/**/*.{js,jsx,ts,tsx}',
-    'src/styles/index.css'
+    '.src/components/**/*.{ts,tsx}',
+    '.src/pages/**/*.{ts,tsx}',
+    '.src/styles/index.css',
   ],
   theme: {
     extend: {},

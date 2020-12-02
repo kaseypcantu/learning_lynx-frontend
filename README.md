@@ -1,7 +1,7 @@
 _Learning Lynx Frontend_
 =========================
 
-_A place to organize links and resources I wish to learn from_
+_A place to organize links and resources I wish to learn from._
 
 ### Deploy your own `Learning Lynx` instance
 

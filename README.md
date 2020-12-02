@@ -74,7 +74,7 @@ docker-compose logs
 docker-compose logs backend
 ``` 
 
-You can see the running services to confirm they are up and running, by using the following Docker command.
+- You can see the running services to confirm they are up and running, by using the following Docker command.
 
 ```bash
 docker ps -a

@@ -1,9 +1,5 @@
 import * as React from 'react';
-import {
-  Button,
-  TextField,
-  Grid,
-} from '@material-ui/core';
+import { Button, TextField, Grid } from '@material-ui/core';
 import { Form, Formik, FieldAttributes, useField } from 'formik';
 import * as yup from 'yup';
 import { YupMessaging } from '../utils/constants/yupMessaging';
@@ -11,58 +7,49 @@ import { YupMessaging } from '../utils/constants/yupMessaging';
 type FormikInputProps = FieldAttributes<React.ComponentProps<typeof TextField>> & {
   label: string;
   placeholder: string;
-}
+};
 
 export type newLink = {
   linkTitle: string;
   linkUrl: string;
   programmingLanguage: string;
   description: string;
-}
+};
 
 const newLinkFormValidationSchema: yup.ObjectSchema<newLink> = yup
   .object()
   .shape({
     linkTitle: yup
       .string()
-      .matches(
-        /[^><!&?@$#%^*\\+-=)(:'"}{\/]+/,
-        YupMessaging.symbolsNotAllowed,
-      )
+      .matches(/[^><!&?@$#%^*\\+-=)(:'"}{\/]+/, YupMessaging.symbolsNotAllowed)
       .required(YupMessaging.linkTitleRequired)
       .max(55, YupMessaging.max),
     linkUrl: yup
       .string()
       .matches(
         /((https?):\/\/)?(www.)?[a-z0-9-]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#-]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
-        YupMessaging.invalidUrl,
+        YupMessaging.invalidUrl
       )
       .required(YupMessaging.linkUrlRequired)
       .max(512, YupMessaging.max),
     programmingLanguage: yup
       .string()
-      .matches(
-        /[^><!&?@$#%^*\\+=)(:'"}{]+/,
-        YupMessaging.symbolsNotAllowed,
-      )
+      .matches(/[^><!&?@$#%^*\\+=)(:'"}{]+/, YupMessaging.symbolsNotAllowed)
       .required(YupMessaging.programmingLanguageRequired)
       .max(55),
     description: yup
       .string()
-      .matches(
-        /[^><!&?@$#%^*\\+=)(:'"}{]+/,
-        YupMessaging.symbolsNotAllowed,
-      )
+      .matches(/[^><!&?@$#%^*\\+=)(:'"}{]+/, YupMessaging.symbolsNotAllowed)
       .required(YupMessaging.descriptionRequired),
   })
   .required();
 
 // Custom input TextField
 export const InputTextField: React.FC<FieldAttributes<FormikInputProps>> = ({
-                                                                              label,
-                                                                              placeholder,
-                                                                              ...props
-                                                                            }) => {
+  label,
+  placeholder,
+  ...props
+}) => {
   const [field, meta] = useField<{}>(props);
   const errorMessage = meta.error && meta.touched ? meta.error : undefined;
   return (
@@ -104,11 +91,7 @@ const AddLinkForm: React.FC = () => {
         setSubmitting(false);
       }}
     >
-      {({
-          values,
-          errors,
-          isSubmitting,
-        }) => (
+      {({ values, errors, isSubmitting }) => (
         <div className={'mt-40'}>
           <Form autoComplete={'off'} style={{ margin: 20 }}>
             <Grid container spacing={2}>
@@ -161,12 +144,8 @@ const AddLinkForm: React.FC = () => {
                 </Button>
               </Grid>
             </Grid>
-            <pre className={'my-8'}>
-              {JSON.stringify(values, null, 2)}
-            </pre>
-            <pre className={'my-8'}>
-              {JSON.stringify(errors, null, 2)}
-            </pre>
+            <pre className={'my-8'}>{JSON.stringify(values, null, 2)}</pre>
+            <pre className={'my-8'}>{JSON.stringify(errors, null, 2)}</pre>
           </Form>
         </div>
       )}

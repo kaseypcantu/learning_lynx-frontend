@@ -14,7 +14,8 @@ with [TypeScript](https://www.typescriptlang.org/docs/handbook/intro.html "TypeS
 a [GraphQL API](https://graphql.org/ "GraphQL Official Site") backend.
 
 - Deployed on [Vercel](https://vercel.com/ "Vercel Deployment").
-- **CI/CD** via [GitLab CI/CD]() & [GitHub Actions]()
+- **CI/CD** via [GitLab CI/CD](https://docs.gitlab.com/ee/ci/ "GitLab CI/CD Documentation")
+  & [GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions "GitHub Actions Documentation")
 
 Local Development Environment
 -----------------------------
@@ -98,10 +99,20 @@ docker ps -a
 [_Makefile_](https://www.gnu.org/software/make/manual/make.html#Values "Makefile Documentation")
 ================================================================================================
 The `Makefile` provided will help in creating Docker images and deploying a `docker stack` to a `docker swarm` locally
-or swarm composed of [DigitalOcean Droplets](). The following command will list available Make actions set in
-the `Makefile`.
+or to a swarm composed of [DigitalOcean Droplets](https://www.digitalocean.com/products/droplets/ "DigitalOcean Droplets"). The following
+command will list available Make actions set in the `Makefile`.
 
 ```bash
 make help
 ```
 
+| Make Command | Description |
+| ------------ | ----------- |
+| `dev-image` | Make a development Node.js image with dev/test dependencies for Next.js frontend |
+| `dev-shell` | Make a BASH shell in the dev docker container and remove it after shutdown |
+| `run-dev_container` | Make docker run the dev image and remove it after shutdown |
+| `prod-image` | Make a production Node.js image with optimized Next.js build |
+| `prod-shell` | Make a BASH hell in the production docker container and remove it after shutdown |
+| `run-prod_container` | Make docker run the prod image and remove it after shutdown |
+| `docker-stack_local` | Make a local deployment using docker-compose: docker stack -> docker swarm |
+| `unstack` | Make a local docker-compose deployment shutdown and remove docker stack and docker swarm |

@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import { NextApiRequest, NextApiResponse } from 'next';
+import { GRAPHQL_SERVER, isProd } from '../../utils/config';
 
 export default async function graphql(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   const headers = new Headers();
@@ -8,7 +9,7 @@ export default async function graphql(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const response = await fetch(
-      (process.env.GRAPHQL_SERVER as string) ?? 'http://localhost:1993/graphql',
+      isProd ? (GRAPHQL_SERVER as string ?? 'http://localhost:1993/graphql') : 'http://localhost:1993/graphql',
       {
         method: 'POST',
         headers: headers,

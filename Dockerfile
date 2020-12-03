@@ -32,8 +32,8 @@ CMD ["yarn", "dev"]
 
 FROM builder as production
 
-COPY . /usr/src/app/learning_lynx
+COPY . /usr/src/app
 
-COPY --from=builder /usr/src/app/learning_lynx/.next/ /usr/src/app/learning_lynx/.next/
+COPY --from=builder .next/ /usr/src/app/
 
 CMD ["yarn", "start"]

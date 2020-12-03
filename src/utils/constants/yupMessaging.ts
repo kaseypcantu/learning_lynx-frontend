@@ -10,5 +10,5 @@ export enum YupMessaging {
   symbolsNotAllowed = 'Symbols are not allowed',
   invalidUrl = 'Please enter a valid URL',
   descriptionRequired = 'Description is required',
-  programmingLanguageRequired = 'Language is required'
+  programmingLanguageRequired = 'Language is required',
 }

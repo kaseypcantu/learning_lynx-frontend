@@ -16,7 +16,7 @@ EXPOSE $PORT
 
 FROM base as builder
 
-COPY ./.next/ .
+COPY . .
 
 CMD ["yarn", "clean"]
 

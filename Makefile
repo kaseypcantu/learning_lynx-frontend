@@ -18,7 +18,7 @@ dev-shell: ## Make a BASH shell in the dev docker container and remove it after 
 	docker run --name $(APP_NAME) --rm -it $(IMAGE):dev bash
 
 run-dev_container: ## Make docker run the dev image and remove it after shutdown
-	docker run --name $(APP_NAME) --rm -d -p 3000:3000 $(IMAGE):dev
+	docker run --name $(APP_NAME).dev --rm -d -p 3000:3000 $(IMAGE):dev
 
 prod-image: ## Make a production Node.js image with optimized Next.js build
 	docker build --rm --target production -t $(IMAGE):$(TAG) .
@@ -27,7 +27,7 @@ prod-shell: ## Make a BASH hell in the production docker container  and remove i
 	docker run --rm -it $(IMAGE):$(TAG) bash
 
 run-prod_container: ## Make docker run the prod image and remove it after shutdown
-	docker run --name $(APP_NAME) --rm -d -p 3000:3000 $(IMAGE):$(TAG)
+	docker run --name $(APP_NAME).prod --rm -d -p 3000:3000 $(IMAGE):$(TAG)
 
 docker-stack_local: prod-image ## Make a local deployment using docker-compose: docker stack -> docker swarm
 	@-docker swarm init

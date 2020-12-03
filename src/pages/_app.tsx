@@ -22,12 +22,10 @@ const LearningLynxApp: React.FC<AppProps<LayoutProps>> = ({ Component, pageProps
   }, []);
 
   return (
-    <Component {...pageProps} >
+    <Component {...pageProps}>
       <CssBaseline />
     </Component>
   );
 };
 
 export default LearningLynxApp;
-
-

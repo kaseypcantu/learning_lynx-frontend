@@ -1,10 +1,8 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
 import AddLinkForm from '../components/AddLinkForm';
-import Navbar from "../components/Navbar";
+import Navbar from '../components/Navbar';
 import { NextPage } from 'next';
-
-
 
 const HomePage: NextPage = () => {
   return (
@@ -23,6 +21,6 @@ const HomePage: NextPage = () => {
       </div>
     </Layout>
   );
-}
+};
 
 export default HomePage;

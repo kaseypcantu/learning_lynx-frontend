@@ -18,8 +18,8 @@ export const mainTheme: Theme = createMuiTheme({
   },
   palette: {
     common: {
-      'black': '#000',
-      'white': '#fff',
+      black: '#000',
+      white: '#fff',
     },
     // type: 'dark',
     // primary: {
@@ -177,4 +177,3 @@ export const mainTheme: Theme = createMuiTheme({
     },
   },
 });
-

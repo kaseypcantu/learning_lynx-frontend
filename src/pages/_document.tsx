@@ -1,4 +1,11 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+  DocumentInitialProps,
+} from 'next/document';
 import IndexPageHead from '../components/Header';
 import * as React from 'react';
 import { mainTheme } from '../types/themes/themes';
@@ -24,18 +31,20 @@ export default class LearningLynxDocument extends Document {
             name="description"
             content="Learning Links - A place where you can organize resources and links you want to learn from."
           />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          />
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         </Head>
         <body>
-        <Main />
-        <NextScript />
+          <Main />
+          <NextScript />
         </body>
       </Html>
     );
   }
 }
-
 
 // `getInitialProps` belongs to `_document` (instead of `_app`),
 // it's compatible with server-side generation (SSG).
@@ -66,17 +75,16 @@ LearningLynxDocument.getInitialProps = async (ctx): Promise<DocumentInitialProps
   const sheets = new ServerStyleSheets();
   const originalRenderPage = ctx.renderPage;
 
-  ctx.renderPage = async () => originalRenderPage({
+  ctx.renderPage = async () =>
+    originalRenderPage({
       enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
     });
 
-    const initialProps = await Document.getInitialProps(ctx);
+  const initialProps = await Document.getInitialProps(ctx);
 
-    return {
-      ...initialProps,
-      // Styles fragment is rendered after the app and page rendering finish.
-      styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
-    };
+  return {
+    ...initialProps,
+    // Styles fragment is rendered after the app and page rendering finish.
+    styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
+  };
 };
-
-

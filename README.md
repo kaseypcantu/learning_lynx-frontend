@@ -116,3 +116,4 @@ make help
 | `run-prod_container` | Make docker run the prod image and remove it after shutdown |
 | `docker-stack_local` | Make a local deployment using docker-compose: docker stack -> docker swarm |
 | `unstack` | Make a local docker-compose deployment shutdown and remove docker stack and docker swarm |
+- Learn more about [Docker Swarm](https://dockerswarm.rocks/ "Docker Swarm Rocks")

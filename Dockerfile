@@ -18,6 +18,8 @@ FROM base as builder
 
 COPY ./.next/ .
 
+CMD ["yarn", "clean"]
+
 CMD ["yarn", "build"]
 
 ################## Next.js development  ###################

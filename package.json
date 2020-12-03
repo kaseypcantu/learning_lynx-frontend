@@ -12,7 +12,7 @@
     "build": "next build",
     "clean": "shx rm -rf coverage dist .next",
     "dev": "next dev",
-    "lint": "yarn tsc:check && eslint .",
+    "lint": "yarn tsc:check && eslint . --fix",
     "prepush": "yarn lint",
     "start": "next start",
     "tsc:check": "tsc -p tsconfig.json --noEmit"

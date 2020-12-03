@@ -1,14 +1,13 @@
-import Head from "next/head";
+import Head from 'next/head';
 import * as React from 'react';
 import { Theme } from '@material-ui/core';
 
 type IndexHeadProps = {
-  title?: string,
-  theme?: Theme
-}
+  title?: string;
+  theme?: Theme;
+};
 
-
-const IndexPageHead: React.FC<IndexHeadProps> = ({ title = "Learning Links" }) => {
+const IndexPageHead: React.FC<IndexHeadProps> = ({ title = 'Learning Links' }) => {
   return (
     <Head>
       <title>{title}</title>
@@ -16,6 +15,6 @@ const IndexPageHead: React.FC<IndexHeadProps> = ({ title = "Learning Links" }) =
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
   );
-}
+};
 
 export default IndexPageHead;

@@ -32,8 +32,4 @@ CMD ["yarn", "dev"]
 
 FROM builder as production
 
-COPY . /usr/src/app
-
-COPY --from=builder .next/ /usr/src/app/
-
 CMD ["yarn", "start"]

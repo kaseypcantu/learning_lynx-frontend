@@ -11,4 +11,5 @@ export enum YupMessaging {
   invalidUrl = 'Please enter a valid URL',
   descriptionRequired = 'Description is required',
   programmingLanguageRequired = 'Language is required',
+  true = 'Field must be true',
 }

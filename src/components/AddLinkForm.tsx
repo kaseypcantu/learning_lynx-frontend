@@ -4,7 +4,6 @@ import { Form, Formik, FieldAttributes, useField } from 'formik';
 import * as yup from 'yup';
 import { YupMessaging } from '../utils/constants/yupMessaging';
 
-// TODO: Write tests.
 type FormikInputProps = FieldAttributes<React.ComponentProps<typeof TextField>> & {
   label: string;
   placeholder: string;

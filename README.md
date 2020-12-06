@@ -1,7 +1,9 @@
-_Learning Lynx Frontend_
+_Learning Lynx Frontend_ 
 =========================
 
 _A place to organize links and resources I wish to learn from._
+
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/kpcwebdev/learning_lynx-frontend?color=blue&logo=docker)
 
 ### Deploy your own `Learning Lynx` instance
 

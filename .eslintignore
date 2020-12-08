@@ -1,9 +1,10 @@
-./node_modules
-./lib
-./public
+node_modules/
+dist/
+lib/
+public/
 *.md
-./docker
-./.husky
-./.next
+docker/
+.husky/
+.next/
 next-env.d.ts
 *.js

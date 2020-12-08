@@ -52,8 +52,8 @@ Docker Development via [_Docker Compose_](https://docs.docker.com/compose/ "Dock
 =====================================================================================================
 
 ### Container Stack
-- [Learning Lynx Backend](https://hub.docker.com/r/kpcwebdev/learning_lynx-backend "Learning Lynx Backend")
 - [Learning Lynx Frontend](https://hub.docker.com/r/kpcwebdev/learning_lynx-frontend "Learning Lynx Frontend Docker Image")
+- [Learning Lynx Backend](https://hub.docker.com/r/kpcwebdev/learning_lynx-backend "Learning Lynx Backend Docker Image")
 - [PostgreSQL](https://hub.docker.com/_/postgres "Official Postgres Image")
 - [Redis](https://hub.docker.com/_/redis "Official Redis Image")
 - [pgAdmin](https://hub.docker.com/r/dpage/pgadmin4 "pgAdmin Docker Image")

@@ -9,7 +9,7 @@ env:
   node: true
 
 overrides:
-  # Linter settings for JavaScript and TypeScript
+  # Linter settings for JavaScript
   - files: [ "**/*.{js, jsx}" ]
     parserOptions:
       ecmaVersion: 2020

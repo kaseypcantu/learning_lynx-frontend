@@ -4,7 +4,7 @@ ARG PORT=3000
 
 WORKDIR /usr/src/app
 
-COPY package.json .
+COPY ./package.json .
 
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash && yarn install
 

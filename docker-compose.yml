@@ -14,7 +14,7 @@ services:
       - 1993:1993
 
   frontend:
-    image: kpcwebdev/learning_lynx-frontend:latest
+    image: kpcwebdev/learning_lynx-frontend:dev
     env_file:
       - .env
     depends_on:
